@@ -52,3 +52,5 @@ end
 
 
 gem "shakapacker", "= 8.0.2"
+
+gem "react-rails", "= 3.2.1"
