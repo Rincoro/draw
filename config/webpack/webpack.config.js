@@ -1,6 +1,15 @@
 // See the shakacode/shakapacker README and docs directory for advice on customizing your webpackConfig.
-const { generateWebpackConfig } = require('shakapacker')
+const { generateWebpackConfig } = require('shakapacker');
+const { merge } = require('webpack-merge');
 
-const webpackConfig = generateWebpackConfig()
+const baseConfig = generateWebpackConfig(); // 基本の設定を取得
 
-module.exports = webpackConfig
+const customConfig = {
+  // ここにカスタム設定を書く
+};
+
+const webpackConfig = merge(baseConfig, customConfig); // 基本設定とカスタム設定をマージ
+
+module.exports = webpackConfig; // マージした設定をエクスポート
+
+
